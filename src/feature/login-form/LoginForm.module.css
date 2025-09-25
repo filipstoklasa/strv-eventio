@@ -1,0 +1,46 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	max-width: 420px;
+}
+
+.heading {
+	text-align: center;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--spacing-md);
+	width: 100%;
+}
+
+.forgot {
+	margin-bottom: var(--spacing-lg);
+}
+
+@media screen and (min-width: 1024px) {
+	.container {
+		align-items: flex-start;
+	}
+
+	.heading {
+		text-align: left;
+	}
+
+	.form {
+		align-items: flex-start;
+	}
+
+	.forgot {
+		display: none;
+	}
+
+	.signIn {
+		margin-top: var(--spacing-3xl);
+	}
+}

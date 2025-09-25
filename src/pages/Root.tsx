@@ -1,5 +1,10 @@
 import { Outlet } from "@tanstack/react-router";
+import { RootLayout } from "src/feature/layouts";
 
 export const Root = () => {
-  return <Outlet />;
+  return (
+    <RootLayout>
+      <Outlet />
+    </RootLayout>
+  );
 };

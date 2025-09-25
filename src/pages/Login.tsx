@@ -1,3 +1,5 @@
+import { LoginForm } from "src/feature/login-form";
+
 export const Login = () => {
-  return <div>Login</div>;
+  return <LoginForm />;
 };

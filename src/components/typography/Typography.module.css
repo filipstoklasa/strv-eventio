@@ -1,0 +1,28 @@
+.h1 {
+	font-size: var(--font-size-xl);
+	font-weight: 400;
+	color: var(--color-text-main);
+}
+
+.body {
+	font-size: var(--font-size-sm);
+	font-weight: 400;
+	color: var(--color-text-secondary);
+}
+
+.caption {
+	font-size: var(--font-size-sm);
+	font-weight: 400;
+	color: var(--color-text-secondary);
+}
+
+@media (min-width: 1024px) {
+	.h1 {
+		font-size: var(--font-size-3xl);
+	}
+
+	.body {
+		font-size: var(--font-size-lg);
+	}
+
+}
