@@ -1,0 +1,6 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-inline: var(--spacing-sm);
+  padding-top: var(--spacing-3xl);
+}

@@ -1,4 +1,4 @@
-.wrapper {
+.container {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
@@ -15,11 +15,17 @@
 	opacity: 1;
 }
 
-.label:has(+ .input:placeholder-shown) {
+.label:has(+ .inputContainer .input:placeholder-shown) {
 	opacity: 0;
 }
 
+.inputContainer {
+	position: relative;
+	width: 100%;
+}
+
 .input {
+	width: 100%;
 	border: none;
 	border-bottom: 2px solid var(--color-bg-grey);
 	background: transparent;

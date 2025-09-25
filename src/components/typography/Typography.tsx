@@ -2,7 +2,7 @@ import type { ElementType, ReactNode, ComponentPropsWithoutRef } from "react";
 import styles from "./Typography.module.css";
 import clsx from "clsx";
 
-type TypographyVariant = "h1" | "body" | "caption";
+type TypographyVariant = "h1" | "body" | "caption" | "error";
 
 type TypographyProps<T extends ElementType> = {
   as?: T;

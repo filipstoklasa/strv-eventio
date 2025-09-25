@@ -1,0 +1,12 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: var(--spacing-lg) var(--spacing-lg) 0;
+}
+
+.logo {
+	background: url("../../../assets/logo.svg") no-repeat center;
+	width: 29px;
+	height: 28px;
+}

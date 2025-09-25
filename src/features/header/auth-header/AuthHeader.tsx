@@ -1,4 +1,4 @@
-import { SignUpLink } from "../sign-up-link";
+import { SignUpLink } from "../../sign-up-link";
 import styles from "./AuthHeader.module.css";
 
 export const AuthHeader = () => {
