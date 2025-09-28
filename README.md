@@ -50,3 +50,15 @@ pnpm generate-api
 - `.env.example` → Example environment variables.
 
 ---
+
+## 🐌 Progress
+
+- [x] Sign in
+- [x] Events list
+- [x] Logout
+- [x] Create new event
+- [x] Join/leave event
+- [x] Edit event
+- [ ] Event detail
+- [ ] Sign up
+- [ ] User detail
