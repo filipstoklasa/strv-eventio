@@ -4,6 +4,7 @@ import { RouterProvider } from "@tanstack/react-router";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { router } from "./router";
 import { UserProvider } from "./context/user-context";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import "./main.css";
 
 // Create a query client
@@ -19,6 +20,7 @@ if (!rootElement.innerHTML) {
           <RouterProvider router={router} />
         </UserProvider>
       </QueryClientProvider>
+      <SpeedInsights />
     </StrictMode>
   );
 }
