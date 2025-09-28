@@ -1,4 +1,4 @@
-import { AUTH_TOKEN } from "src/constants/session";
+const AUTH_TOKEN = "authToken";
 
 export const getAuthToken = () => {
   return localStorage.getItem(AUTH_TOKEN);

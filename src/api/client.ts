@@ -13,7 +13,7 @@ const apiClient = axios.create({
   },
 });
 
-// Define which endpoints need auth
+// Note - Define which endpoints need auth
 const AUTH_REQUIRED_ENDPOINTS = ["/events"];
 
 apiClient.interceptors.request.use((config) => {
@@ -24,6 +24,7 @@ apiClient.interceptors.request.use((config) => {
     config.url &&
     AUTH_REQUIRED_ENDPOINTS.some((endpoint) => config.url?.startsWith(endpoint))
   ) {
+    // Note - Append auth token to protected endpoint request
     config.headers.set("Authorization", `Bearer ${token}`);
   }
 
@@ -31,6 +32,7 @@ apiClient.interceptors.request.use((config) => {
 });
 
 apiClient.interceptors.response.use((config) => {
+  // Note - Logout user if the response is 401
   if (config.status === 401) {
     logout();
   }

@@ -13,9 +13,3 @@
 	width: 29px;
 	height: 28px;
 }
-
-.createEventIcon {
-	display: flex;
-	align-items: center;
-	gap: var(--spacing-sm)
-}

@@ -2,7 +2,7 @@ import { Input } from "src/components/input";
 import { Button } from "src/components/button";
 import { Typography } from "src/components/typography/Typography";
 import { PasswordInput } from "src/features/password-input";
-import { SignUpLink } from "../sign-up-link";
+import { SignUpLink } from "src/features/sign-up-link";
 import { useLoginForm } from "./hooks/use-login-form";
 import styles from "./LoginForm.module.css";
 

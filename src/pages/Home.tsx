@@ -1,7 +1,7 @@
 import { useNavigate } from "@tanstack/react-router";
 import { ActionButton } from "src/components/action-button";
 import { EventsList } from "src/features/events-list";
-import { ControlsProvider } from "src/features/events-list/components/controls/context";
+import { ControlsProvider } from "src/context/controls-context";
 
 export const Home = () => {
   const navigate = useNavigate();

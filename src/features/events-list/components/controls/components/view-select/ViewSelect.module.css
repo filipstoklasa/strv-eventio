@@ -1,0 +1,11 @@
+.viewContainer {
+	display: flex;
+}
+
+.viewIcon path {
+	fill: var(--color-bg-grey);
+}
+
+.viewIcon.active path {
+	fill: var(--color-bg-grey-dark);
+}

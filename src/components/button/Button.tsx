@@ -1,16 +1,10 @@
 import React, { type ReactNode } from "react";
 import clsx from "clsx";
+import IconSpinnerLight from "src/assets/icons/icon-spinner-light.svg?react";
 import styles from "./Button.module.css";
-import IconSpinnerLight from "src/assets/icon-spinner-light.svg?react";
 
 type ButtonSize = "normal" | "small";
-
-export type ButtonVariant =
-  | "primary"
-  | "secondary"
-  | "alert"
-  | "disabled"
-  | "link";
+type ButtonVariant = "primary" | "secondary" | "alert" | "disabled" | "link";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;

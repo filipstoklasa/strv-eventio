@@ -1,8 +1,8 @@
 import { useNavigate } from "@tanstack/react-router";
 import { Button } from "src/components/button";
 import { Typography } from "src/components/typography";
+import IconNotFound from "src/assets/icons/icon-not-found.svg?react";
 import styles from "./NotFoundStatement.module.css";
-import IconNotFound from "src/assets/icon-not-found.svg?react";
 
 export const NotFoundStatement = () => {
   const navigate = useNavigate();

@@ -1,6 +1,6 @@
-import IconPlus from "src/assets/icon-plus.svg?react";
+import IconPlus from "src/assets/icons/icon-plus.svg?react";
+import { IconButton } from "src/components/icon-button";
 import styles from "./ActionButton.module.css";
-import { IconButton } from "../icon-button";
 
 interface ActionButtonProps {
   action: () => void;

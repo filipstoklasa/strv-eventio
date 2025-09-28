@@ -1,16 +1,16 @@
-import { useEvents } from "src/api/get-events";
-import { EventCard } from "./components/event-card";
-import clsx from "clsx";
-import styles from "./EventsList.module.css";
-import { Controls } from "./components/controls";
-import { useControls } from "./components/controls/context";
 import { useMemo } from "react";
+import clsx from "clsx";
+import { useEvents } from "src/api/get-events";
+import { useControlsContext } from "src/context/controls-context";
+import { PageLoader } from "src/components/page-loader";
+import { EventCard } from "./components/event-card";
+import { Controls } from "./components/controls";
 import { filterPastEvents } from "./components/utils/filter-past-events";
 import { filterFutureEvents } from "./components/utils/filter-future-events";
-import { PageLoader } from "src/components/page-loader";
+import styles from "./EventsList.module.css";
 
 export const EventsList = () => {
-  const { view, filter } = useControls();
+  const { view, filter } = useControlsContext();
   const { data, isLoading } = useEvents();
 
   const filteredData = useMemo(() => {

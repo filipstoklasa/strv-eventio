@@ -1,8 +1,8 @@
 import type { ReactNode } from "react";
-import styles from "./IconButton.module.css";
 import clsx from "clsx";
+import styles from "./IconButton.module.css";
 
-export interface IconButtonProps
+interface IconButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   icon: ReactNode;
 }

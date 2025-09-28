@@ -1,10 +1,10 @@
 import type { ChangeEvent } from "react";
 import { Typography } from "src/components/typography";
+import { useControlsContext, type Filter } from "src/context/controls-context";
 import styles from "./FilterSelect.module.css";
-import { useControls, type Filter } from "../../context";
 
 export const FilterSelect = () => {
-  const { filter, setFilter } = useControls();
+  const { filter, setFilter } = useControlsContext();
 
   const onSelectFilter = (event: ChangeEvent<HTMLSelectElement>) => {
     setFilter(event.target.value as Filter);

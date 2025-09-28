@@ -1,0 +1,122 @@
+/* Font Faces */
+@font-face {
+  font-family: 'Hind';
+  src: url('/fonts/Hind/Hind-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hind';
+  src: url('/fonts/Hind/Hind-Light.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hind';
+  src: url('/fonts/Hind/Hind-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hind';
+  src: url('/fonts/Hind/Hind-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hind';
+  src: url('/fonts/Hind/Hind-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src: url('/fonts/PlayfairDisplay/PlayfairDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Check if you need to specify for each font weight */
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src: url('/fonts/PlayfairDisplay/PlayfairDisplay-Regular.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src: url('/fonts/PlayfairDisplay/PlayfairDisplay-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+}
+
+/* CSS Variables */
+:root {
+  /* Colors */
+  --color-bg-success: #22D486;
+  --color-bg-success-hover: #20BD78;
+  --color-bg-error: #FF4081;
+  --color-bg-error-hover: #E73370;
+  --color-bg-grey: #D9DCE1;
+  --color-bg-grey-dark: #323C46;
+  --color-bg-grey-medium: #565D5A;
+  --color-bg-grey-light: #F9F9FB;
+  --color-bg-card-light: #FFFFFF;
+
+  --color-text-main: #323C46;
+  --color-text-secondary: #949EA8;
+  --color-text-placeholder: #C9CED3;
+  --color-text-error: #FF4081;
+  --color-text-white: #FFFFFF;
+
+  --color-border-main: #22D486;
+
+  /* Shadows */
+  --shadow-card: 0px 2px 3px 0px rgba(0, 0, 0, 0.1087);
+
+  /* Font */
+  --font-family-main: 'Hind', sans-serif;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 22px;
+  --font-size-2xl: 26px;
+  --font-size-3xl: 28px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 600;
+
+  /* Border radius */
+  --radius-main: 4px;
+  --radius-card: 2px;
+
+  /* Spacing (examples, adjust as needed) */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 40px;
+  --spacing-3xl: 48px;
+}
+
+* {
+  font-family: 'Hind', sans-serif;
+}

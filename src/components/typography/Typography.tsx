@@ -1,6 +1,6 @@
 import type { ElementType, ReactNode, ComponentPropsWithoutRef } from "react";
-import styles from "./Typography.module.css";
 import clsx from "clsx";
+import styles from "./Typography.module.css";
 
 type Size = "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl";
 type Variant = "main" | "secondary" | "error";

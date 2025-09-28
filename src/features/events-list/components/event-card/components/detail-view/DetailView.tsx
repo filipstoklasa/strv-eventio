@@ -1,37 +1,18 @@
-import type { EventsResponse } from "src/api/get-events/get-events";
-import { Button, type ButtonVariant } from "src/components/button";
+import { Button } from "src/components/button";
 import { Typography } from "src/components/typography";
+import type { ViewProps } from "../types";
 import { formatEventDate } from "../../utils/format-event-date";
+import IconUser from "src/assets/icons/icon-user.svg?react";
 import styles from "./DetailView.module.css";
-import IconUser from "src/assets/icon-user.svg?react";
 
-type EventActionType = "join" | "leave";
-
-interface EventCardProps {
-  id: string;
-  date: string;
-  name: string;
-  organizer: string;
-  description: string;
-  attendees: EventsResponse[number]["attendees"];
-  maxAttendees: number;
-  ownerId: string;
-  action: EventActionType | "edit" | null;
-  editEvent: (id: string, action: EventActionType) => void;
-  disabled?: boolean;
-}
-
-const buttonVariantMap: Record<EventActionType, ButtonVariant> = {
-  join: "primary",
-  leave: "alert",
-};
+type DetailViewProps = ViewProps;
 
 export const DetailView = ({
   disabled,
   action,
   editEvent,
   ...props
-}: EventCardProps) => {
+}: DetailViewProps) => {
   return (
     <div className={styles.cardContent}>
       <div>
@@ -59,10 +40,10 @@ export const DetailView = ({
             {props.attendees.length} of {props.maxAttendees}
           </Typography>
         </div>
-        {action && action !== "edit" ? (
+        {action ? (
           <Button
             className={styles.eventButton}
-            variant={buttonVariantMap[action]}
+            variant={action === "join" ? "primary" : "alert"}
             disabled={disabled}
             size="small"
             onClick={() => editEvent(props.id, action)}

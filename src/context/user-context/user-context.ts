@@ -1,5 +1,5 @@
-import type { operations } from "codegen/eventio";
 import { createContext, useContext } from "react";
+import type { operations } from "codegen/eventio";
 
 export type User =
   operations["eventio-auth-signIn"]["responses"]["200"]["content"]["application/json"];

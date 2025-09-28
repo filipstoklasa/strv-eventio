@@ -1,36 +1,17 @@
-import type { EventsResponse } from "src/api/get-events/get-events";
-import { Button, type ButtonVariant } from "src/components/button";
+import { Button } from "src/components/button";
 import { Typography } from "src/components/typography";
+import type { ViewProps } from "../types";
 import { formatEventDate } from "../../utils/format-event-date";
 import styles from "./CompactView.module.css";
 
-type EventActionType = "join" | "leave";
-
-interface EventCardProps {
-  id: string;
-  date: string;
-  name: string;
-  organizer: string;
-  description: string;
-  attendees: EventsResponse[number]["attendees"];
-  maxAttendees: number;
-  ownerId: string;
-  action: EventActionType | "edit" | null;
-  editEvent: (id: string, action: EventActionType) => void;
-  disabled?: boolean;
-}
-
-const buttonVariantMap: Record<EventActionType, ButtonVariant> = {
-  join: "primary",
-  leave: "alert",
-};
+type CompactViewProps = ViewProps;
 
 export const CompactView = ({
   disabled,
   action,
   editEvent,
   ...props
-}: EventCardProps) => {
+}: CompactViewProps) => {
   return (
     <div className={styles.cardContent}>
       <div className={styles.itemName}>
@@ -57,9 +38,9 @@ export const CompactView = ({
         </Typography>
       </div>
       <div className={styles.itemButton}>
-        {action && action !== "edit" ? (
+        {action ? (
           <Button
-            variant={buttonVariantMap[action]}
+            variant={action === "join" ? "primary" : "alert"}
             disabled={disabled}
             size="small"
             onClick={() => editEvent(props.id, action)}

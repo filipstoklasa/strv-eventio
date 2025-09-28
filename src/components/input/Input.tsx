@@ -1,7 +1,7 @@
 import React from "react";
 import clsx from "clsx";
+import { Typography } from "src/components/typography";
 import styles from "./Input.module.css";
-import { Typography } from "../typography";
 
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {

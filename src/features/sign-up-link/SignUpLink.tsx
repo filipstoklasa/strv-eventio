@@ -1,5 +1,5 @@
-import { Typography } from "src/components/typography";
 import clsx from "clsx";
+import { Typography } from "src/components/typography";
 
 interface SignUpLinkProps {
   className?: string;
