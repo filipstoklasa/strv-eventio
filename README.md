@@ -6,6 +6,7 @@
 
 - Node.js >= 18
 - pnpm (preferred)
+- .env file copied from .env.example with `VITE_API_KEY` variable set
 
 ### Install
 
