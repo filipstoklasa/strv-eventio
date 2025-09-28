@@ -58,7 +58,7 @@ pnpm generate-api
 - [x] Logout
 - [x] Create new event
 - [x] Join/leave event
-- [x] Edit event
+- [ ] Edit event
 - [ ] Event detail
 - [ ] Sign up
 - [ ] User detail
