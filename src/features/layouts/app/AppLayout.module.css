@@ -1,6 +1,14 @@
 .container {
   display: flex;
+  flex: 1;
   flex-direction: column;
   padding-inline: var(--spacing-sm);
-  padding-top: var(--spacing-3xl);
+  padding-block: var(--spacing-xl);
+  background-color: var(--color-bg-grey-light);
+}
+
+@media screen and (min-width:1024px) {
+  .container {
+    padding: var(--spacing-3xl);
+  }
 }

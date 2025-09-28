@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.logoutButton {
+  position: absolute;
+  right: 0;
+  bottom: -25px;
+  transform: translateY(50%);
+}

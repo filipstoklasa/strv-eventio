@@ -1,0 +1,73 @@
+.cardContent {
+  display: grid;
+  grid-template-areas:
+    "name name"
+    "desc desc"
+    "date button"
+    "attendees button";
+  /* row-gap: var(--spacing-lg); */
+}
+
+.cardContent>* {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.cardContent * {
+  margin: 0;
+}
+
+.itemName {
+  grid-area: name;
+}
+
+.itemDescription {
+  grid-area: desc;
+  margin-bottom: var(--spacing-md);
+}
+
+.itemDate {
+  grid-area: date;
+
+}
+
+.itemOrganizer {
+  display: none;
+  grid-area: org;
+
+}
+
+.itemAttendees {
+  grid-area: attendees;
+}
+
+.itemButton {
+  grid-area: button;
+  align-self: center;
+  justify-self: self-end;
+}
+
+@media screen and (min-width:1024px) {
+  .cardContent {
+    display: inline-grid;
+    height: 30px;
+    align-items: center;
+    grid-template-areas:
+      "name desc org date attendees button";
+    grid-template-columns: 3fr 3fr 1fr 2fr 1fr minmax(100px, 1fr);
+    align-items: center;
+    column-gap: var(--spacing-lg);
+  }
+
+  .itemOrganizer {
+    display: block;
+  }
+
+  .itemDescription {
+    margin-bottom: 0;
+  }
+}

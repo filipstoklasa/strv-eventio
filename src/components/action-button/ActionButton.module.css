@@ -1,0 +1,20 @@
+.actionButton {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--color-bg-grey-dark);
+	border: none;
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	bottom: 16px;
+	right: 16px;
+}
+
+@media screen and (min-width:1024px) {
+	.actionButton {
+		bottom: 67px;
+		right: 67px;
+	}
+}

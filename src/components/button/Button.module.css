@@ -1,6 +1,6 @@
 .button {
 	font-family: inherit;
-	font-weight: 600;
+	font-weight: var(--font-weight-bold);
 	border: none;
 	border-radius: var(--radius-main);
 	cursor: pointer;
@@ -20,11 +20,20 @@
 }
 
 .secondary {
-	background: var(--color-bg-error);
+	background: var(--color-bg-grey-dark);
 	color: #fff;
 }
 
 .secondary:hover:not(:disabled) {
+	background: var(--color-bg-grey-medium);
+}
+
+.alert {
+	background: var(--color-bg-error);
+	color: #fff;
+}
+
+.alert:hover:not(:disabled) {
 	background: var(--color-bg-error-hover);
 }
 
@@ -43,7 +52,16 @@
 .small {
 	padding: 8px 24px;
 	min-width: 100px;
-	font-size: var(--font-size-md);
+	font-size: var(--font-size-sm);
+	line-height: 1;
+}
+
+.link {
+	background: none;
+	color: var(--color-text-main);
+	font-weight: var(--font-weight-regular);
+	min-width: auto;
+	padding: 0;
 }
 
 .loading {
@@ -52,13 +70,21 @@
 }
 
 .spinner {
-	width: 24px;
-	height: 24px;
-	border: 3px solid #fff;
-	border-top: 3px solid var(--color-bg-success);
-	border-radius: 50%;
 	animation: spin 1s linear infinite;
-	margin: 0 auto;
+}
+
+.withIcon {
+	font-size: 0;
+}
+
+@media screen and (min-width:1024px) {
+	.withIcon {
+		font-size: initial;
+	}
+
+	.link {
+		gap: var(--spacing-xs)
+	}
 }
 
 @keyframes spin {

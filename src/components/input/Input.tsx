@@ -1,6 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import styles from "./Input.module.css";
+import { Typography } from "../typography";
 
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -36,7 +37,9 @@ export const Input: React.FC<InputProps> = ({
         {endIcon ? <div className={styles.endIcon}>{endIcon}</div> : null}
       </div>
       {errorMessage ? (
-        <div className={styles.errorText}>{errorMessage}</div>
+        <Typography sm="sm" variant="error" className={styles.errorText}>
+          {errorMessage}
+        </Typography>
       ) : null}
     </div>
   );

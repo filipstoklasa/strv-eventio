@@ -76,8 +76,9 @@ body {
   --color-bg-grey: #D9DCE1;
   --color-bg-grey-dark: #323C46;
   --color-bg-grey-medium: #565D5A;
-  --color-bg-grey-light: #C4C9D1;
+  --color-bg-grey-light: #F9F9FB;
   --color-bg-grey-lighter: #DAE1E7;
+  --color-bg-card-light: #FFFFFF;
 
   --color-text-main: #323C46;
   --color-text-secondary: #949EA8;
@@ -94,7 +95,7 @@ body {
 
   /* Shadows */
   --shadow-main: 0px 1px 3px rgba(0, 0, 0, 0.2);
-  --shadow-card: 0px 5px 15px rgba(0, 0, 0, 0.198);
+  --shadow-card: 0px 2px 3px 0px rgba(0, 0, 0, 0.1087);
 
   /* Font */
   --font-family-main: 'Hind', sans-serif;
@@ -108,10 +109,11 @@ body {
 
   --font-weight-regular: 400;
   --font-weight-medium: 500;
+  --font-weight-bold: 600;
 
   /* Border radius */
   --radius-main: 4px;
-  --radius-card: 14px;
+  --radius-card: 2px;
 
   /* Spacing (examples, adjust as needed) */
   --spacing-xs: 4px;

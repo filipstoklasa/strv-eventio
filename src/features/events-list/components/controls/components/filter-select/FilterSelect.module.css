@@ -1,0 +1,37 @@
+.mobileFilterContainer {
+	display: flex;
+	align-items: center;
+}
+
+.desktopFilterContainer {
+	display: none;
+}
+
+.filterContainer {
+	display: flex;
+	align-items: center;
+}
+
+.filterLabel {
+	margin: 0;
+}
+
+.filterSelect {
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: none;
+	font-size: var(--font-size-xs);
+	font-weight: var(--font-weight-bold);
+}
+
+@media screen and (min-width:1024px) {
+	.mobileFilterContainer {
+		display: none;
+	}
+
+	.desktopFilterContainer {
+		display: flex;
+		gap: var(--spacing-md);
+	}
+}

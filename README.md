@@ -1,73 +1,99 @@
-# React + TypeScript + Vite
+# Eventio (React + Vite + TypeScript)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Project Setup
 
-Currently, two official plugins are available:
+### Requirements
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js >= 18
+- pnpm (preferred)
 
-## React Compiler
+### Install
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+pnpm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Run
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+pnpm dev
 ```
+
+Runs the app locally at [http://localhost:5173](http://localhost:5173).
+
+### Build
+
+```bash
+pnpm build
+```
+
+### Lint
+
+```bash
+pnpm lint
+```
+
+### Re-generate api interfaces
+
+```bash
+pnpm generate-api
+```
+
+---
+
+## 📁 Project Structure
+
+- `src/` → React components, pages, and hooks.
+- `public/` → Static assets and fonts.
+- `codegen/` → Auto-generated API client (`eventio.ts`) from the backend API docs.
+- `vite.config.ts` → Vite config.
+- `.env.example` → Example environment variables.
+
+---
+
+## ✅ What’s Done
+
+- Bootstrapped Vite + React + TypeScript project.
+- ESLint configured with strict rules for maintainability.
+- Codegen set up for API calls (`codegen/eventio.ts`).
+- Fonts and basic styling setup.
+- Base folder structure prepared for scalable development.
+
+---
+
+## ⏭️ Next Steps for You
+
+1. **UI Implementation**
+
+   - Use the provided Figma design (see `/docs/design` or shared link).
+   - Create reusable components (buttons, inputs, modals) in `src/components/`.
+   - Stick to a consistent naming convention and folder structure.
+
+2. **Pages & Routing**
+
+   - Set up routing with `react-router-dom`.
+   - Pages needed:
+     - Login / Signup
+     - Events list
+     - Event details
+     - Profile
+
+3. **API Integration**
+
+   - Use the generated API client (`codegen/eventio.ts`) for backend communication.
+   - Authentication flows (login/signup with JWT).
+   - CRUD for events.
+
+4. **State Management**
+
+   - Consider `React Query` for data fetching + caching.
+   - Keep state colocated where possible, avoid global unless necessary.
+
+5. **Testing**
+
+   - Add unit tests with `vitest` and component tests with `@testing-library/react`.
+
+6. **Deployment**
+   - Configure production build and deployment (e.g., Vercel, Netlify, or internal infra).
+
+---

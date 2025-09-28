@@ -1,0 +1,8 @@
+.container {
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-card);
+  box-sizing: border-box;
+  border-radius: var(--radius-card);
+  background-color: var(--color-bg-card-light);
+  min-width: 260px;
+}

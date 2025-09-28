@@ -7,7 +7,7 @@ export const HeroImage = () => {
       <div className={styles.welcomeContainer}>
         <p className={styles.welcomeText}>“Great, kid. Don’t get cocky.”</p>
         <div className={styles.hyphen} />
-        <Typography variant="body" className={styles.authorText}>
+        <Typography variant="secondary" className={styles.authorText}>
           Han Solo
         </Typography>
       </div>

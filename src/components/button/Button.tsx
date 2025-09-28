@@ -1,15 +1,23 @@
-import React from "react";
+import React, { type ReactNode } from "react";
 import clsx from "clsx";
 import styles from "./Button.module.css";
+import IconSpinnerLight from "src/assets/icon-spinner-light.svg?react";
 
-type ButtonVariant = "primary" | "secondary" | "disabled";
 type ButtonSize = "normal" | "small";
 
+export type ButtonVariant =
+  | "primary"
+  | "secondary"
+  | "alert"
+  | "disabled"
+  | "link";
+
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  children: React.ReactNode;
   variant?: ButtonVariant;
   size?: ButtonSize;
   loading?: boolean;
-  children: React.ReactNode;
+  icon?: ReactNode;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -19,23 +27,28 @@ export const Button: React.FC<ButtonProps> = ({
   disabled,
   children,
   className,
+  icon: Icon,
   ...props
 }) => {
   const isDisabled = disabled || variant === "disabled" || loading;
 
   return (
     <button
-      className={clsx(styles.button, styles[variant], styles[size], className, {
-        [styles.loading]: loading,
-      })}
+      className={clsx(
+        styles.button,
+        styles[isDisabled ? "disabled" : variant],
+        styles[size],
+        !!Icon && styles.withIcon,
+        className,
+        {
+          [styles.loading]: loading,
+        }
+      )}
       disabled={isDisabled}
       {...props}
     >
-      {loading ? (
-        <span className={styles.spinner} aria-label="Loading" />
-      ) : (
-        children
-      )}
+      {Icon}
+      {loading ? <IconSpinnerLight className={styles.spinner} /> : children}
     </button>
   );
 };

@@ -13,6 +13,7 @@ import { Route as AuthRouteRouteImport } from './routes/_auth/route'
 import { Route as AppRouteRouteImport } from './routes/_app/route'
 import { Route as AppIndexRouteImport } from './routes/_app/index'
 import { Route as AuthLoginRouteImport } from './routes/_auth/login'
+import { Route as AppCreateEventRouteImport } from './routes/_app/create-event'
 
 const AuthRouteRoute = AuthRouteRouteImport.update({
   id: '/_auth',
@@ -32,12 +33,19 @@ const AuthLoginRoute = AuthLoginRouteImport.update({
   path: '/login',
   getParentRoute: () => AuthRouteRoute,
 } as any)
+const AppCreateEventRoute = AppCreateEventRouteImport.update({
+  id: '/create-event',
+  path: '/create-event',
+  getParentRoute: () => AppRouteRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
+  '/create-event': typeof AppCreateEventRoute
   '/login': typeof AuthLoginRoute
   '/': typeof AppIndexRoute
 }
 export interface FileRoutesByTo {
+  '/create-event': typeof AppCreateEventRoute
   '/login': typeof AuthLoginRoute
   '/': typeof AppIndexRoute
 }
@@ -45,15 +53,22 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/_app': typeof AppRouteRouteWithChildren
   '/_auth': typeof AuthRouteRouteWithChildren
+  '/_app/create-event': typeof AppCreateEventRoute
   '/_auth/login': typeof AuthLoginRoute
   '/_app/': typeof AppIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/login' | '/'
+  fullPaths: '/create-event' | '/login' | '/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/login' | '/'
-  id: '__root__' | '/_app' | '/_auth' | '/_auth/login' | '/_app/'
+  to: '/create-event' | '/login' | '/'
+  id:
+    | '__root__'
+    | '/_app'
+    | '/_auth'
+    | '/_app/create-event'
+    | '/_auth/login'
+    | '/_app/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -91,14 +106,23 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthLoginRouteImport
       parentRoute: typeof AuthRouteRoute
     }
+    '/_app/create-event': {
+      id: '/_app/create-event'
+      path: '/create-event'
+      fullPath: '/create-event'
+      preLoaderRoute: typeof AppCreateEventRouteImport
+      parentRoute: typeof AppRouteRoute
+    }
   }
 }
 
 interface AppRouteRouteChildren {
+  AppCreateEventRoute: typeof AppCreateEventRoute
   AppIndexRoute: typeof AppIndexRoute
 }
 
 const AppRouteRouteChildren: AppRouteRouteChildren = {
+  AppCreateEventRoute: AppCreateEventRoute,
   AppIndexRoute: AppIndexRoute,
 }
 

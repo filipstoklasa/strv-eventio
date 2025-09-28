@@ -52,10 +52,8 @@
 }
 
 .errorText {
-	color: var(--color-text-error);
-	font-size: var(--font-size-md);
 	margin-top: 8px;
-	font-family: var(--font-family-main);
+	margin-bottom: 0px;
 }
 
 .endIcon {

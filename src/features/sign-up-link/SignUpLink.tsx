@@ -1,5 +1,4 @@
 import { Typography } from "src/components/typography";
-import styles from "./SignUpLink.module.css";
 import clsx from "clsx";
 
 interface SignUpLinkProps {
@@ -7,7 +6,7 @@ interface SignUpLinkProps {
 }
 
 export const SignUpLink = ({ className }: SignUpLinkProps) => (
-  <Typography variant="caption" className={clsx(styles.forgot, className)}>
+  <Typography sm="sm" variant="secondary" className={clsx(className)}>
     Don’t have account? <b>SIGN UP</b>
   </Typography>
 );

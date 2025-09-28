@@ -1,0 +1,24 @@
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-inline: var(--spacing-md);
+}
+
+.viewContainer {
+	display: flex;
+}
+
+.viewIcon path {
+	fill: var(--color-bg-grey-lighter)
+}
+
+.viewIcon.active path {
+	fill: var(--color-bg-grey-dark)
+}
+
+@media screen and (min-width:1024px) {
+	.container {
+		padding: 0;
+	}
+}

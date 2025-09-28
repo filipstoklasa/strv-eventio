@@ -1,3 +1,10 @@
+import { AuthLayout } from "src/features/layouts";
+import { NotFoundStatement } from "src/features/not-found-statement";
+
 export const NotFound = () => {
-  return <div>Not Found</div>;
+  return (
+    <AuthLayout>
+      <NotFoundStatement />
+    </AuthLayout>
+  );
 };

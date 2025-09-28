@@ -2,11 +2,20 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	box-sizing: border-box;
 	padding: var(--spacing-lg) var(--spacing-lg) 0;
+	background-color: var(--color-bg-grey-light);
+	height: 56px;
 }
 
 .logo {
 	background: url("../../../assets/logo.svg") no-repeat center;
 	width: 29px;
 	height: 28px;
+}
+
+.createEventIcon {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-sm)
 }

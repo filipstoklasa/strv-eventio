@@ -1,0 +1,28 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-self: center;
+	justify-content: center;
+	width: 100%;
+	max-width: 420px;
+}
+
+.heading {
+	text-align: center;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--spacing-md);
+	width: 100%;
+}
+
+@media screen and (min-width:1024px) {
+	.container {
+		max-width: 480px;
+	}
+
+}

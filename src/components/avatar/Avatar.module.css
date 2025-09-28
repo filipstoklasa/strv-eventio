@@ -1,0 +1,28 @@
+.container {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-sm);
+}
+
+
+.avatar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background-color: var(--color-bg-grey);
+	color: var(--color-text-secondary);
+}
+
+.avatarName {
+	display: none;
+}
+
+@media screen and (min-width:1024px) {
+	.avatarName {
+		display: block;
+		margin: 0;
+	}
+}
