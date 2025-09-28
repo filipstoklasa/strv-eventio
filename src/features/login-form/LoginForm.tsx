@@ -48,6 +48,7 @@ export const LoginForm = () => {
         />
         <SignUpLink className={styles.forgot} />
         <Button
+          name="submit login form"
           className={styles.signIn}
           type="submit"
           loading={isSubmitting}

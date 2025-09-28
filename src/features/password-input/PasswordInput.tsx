@@ -16,6 +16,7 @@ export const PasswordInput = (props: InputProps) => {
       type={visible ? "text" : "password"}
       endIcon={
         <IconButton
+          name="show password"
           onPointerDown={toggleVisibility}
           onPointerUp={toggleVisibility}
           icon={<IconShow />}

@@ -11,6 +11,7 @@ export const ViewSelect = () => {
   return (
     <div className={styles.viewContainer}>
       <IconButton
+        name="detail view"
         icon={
           <IconGrid
             className={clsx(
@@ -22,6 +23,7 @@ export const ViewSelect = () => {
         onClick={() => setView("detail")}
       />
       <IconButton
+        name="compact view"
         icon={
           <IconList
             className={clsx(

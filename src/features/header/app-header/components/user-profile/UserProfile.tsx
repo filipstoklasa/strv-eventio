@@ -21,7 +21,11 @@ export const UserProfile = () => {
         firstName={user?.firstName || ""}
         lastName={user?.lastName || ""}
       />
-      <IconButton onClick={toggleMenu} icon={<IconDropdown />} />
+      <IconButton
+        name="show context"
+        onClick={toggleMenu}
+        icon={<IconDropdown />}
+      />
       {isMenuVisible ? (
         <Button
           className={styles.logoutButton}

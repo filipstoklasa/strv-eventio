@@ -9,6 +9,7 @@ interface ActionButtonProps {
 export const ActionButton = ({ action }: ActionButtonProps) => {
   return (
     <IconButton
+      name="action button"
       icon={<IconPlus />}
       className={styles.actionButton}
       onClick={action}

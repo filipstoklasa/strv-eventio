@@ -20,7 +20,7 @@ if (!rootElement.innerHTML) {
           <RouterProvider router={router} />
         </UserProvider>
       </QueryClientProvider>
-      <SpeedInsights />
+      {import.meta.env.PROD ? <SpeedInsights /> : null}
     </StrictMode>
   );
 }
