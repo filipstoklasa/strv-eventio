@@ -18,9 +18,9 @@
 
 .filterSelect {
 	margin: 0;
-	padding: 0;
 	border: none;
 	background: none;
+	color: var(----color-text-main);
 	font-size: var(--font-size-xs);
 	font-weight: var(--font-weight-bold);
 }

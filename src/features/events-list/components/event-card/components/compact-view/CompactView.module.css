@@ -5,6 +5,8 @@
     "desc desc"
     "date button"
     "attendees button";
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr auto;
 }
 
 .cardContent>* {
@@ -48,6 +50,10 @@
   grid-area: button;
   align-self: center;
   justify-self: self-end;
+  overflow: visible;
+  text-overflow: unset;
+  line-clamp: unset;
+  -webkit-line-clamp: unset;
 }
 
 @media screen and (min-width:1024px) {

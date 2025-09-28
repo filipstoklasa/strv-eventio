@@ -28,6 +28,7 @@
 	width: 100%;
 	border: none;
 	border-bottom: 2px solid var(--color-bg-grey);
+	border-radius: 0px;
 	background: transparent;
 	font-size: var(--spacing-md);
 	line-height: var(--spacing-lg);
